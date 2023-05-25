@@ -2,7 +2,7 @@
 <template>
   <div
     class="card"
-    :class="{ disabled: isDisable }"
+    :class="{ disable: isDisable }"
     :style="{
       height: `${(660 - 16 * 4) / Math.sqrt(cardContext.length) - 16}px`,
       width: `${
@@ -87,7 +87,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .card {
   display: inline-block;
   margin-right: 1rem;

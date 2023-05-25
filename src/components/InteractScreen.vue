@@ -1,6 +1,5 @@
 <template>
   <div class="screen">
-    <p>Interact Screen</p>
     <div
       class="screen__inner"
       :style="{
@@ -74,9 +73,7 @@ export default {
         this.rules.length === 2 &&
         this.rules[0].value !== this.rules[1].value
       ) {
-        console.log("wrong!");
         setTimeout(() => {
-          console.log(this.$refs);
           this.$refs[`card-${this.rules[0].index}`][0].onFlipBackCard();
           this.$refs[`card-${this.rules[1].index}`][0].onFlipBackCard();
           this.rules = [];
